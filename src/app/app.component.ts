@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { Toast, ToastrModule } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
+  standalone: true, 
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [RouterOutlet,RouterLink,ToastrModule]
 })
 export class AppComponent {
-  title = 'frontend';
+  title = 'Employee Management System';
 }

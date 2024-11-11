@@ -1,0 +1,27 @@
+<h3 class="text-center my-4">View Employee Details</h3>
+
+<div class="container">
+  <div class="card shadow-sm p-4">
+    <div class="card-body">
+      <h5 class="card-title">Employee Information</h5>
+      
+      <div class="mb-3">
+        <label for="firstName" class="form-label"><b>First Name:</b></label>
+        <p id="firstName" class="form-control-plaintext">{{ employee.first_name }}</p>
+      </div>
+
+      <div class="mb-3">
+        <label for="lastName" class="form-label"><b>Last Name:</b></label>
+        <p id="lastName" class="form-control-plaintext">{{ employee.last_name }}</p>
+      </div>
+
+      <div class="mb-3">
+        <label for="emailId" class="form-label"><b>Email ID:</b></label>
+        <p id="emailId" class="form-control-plaintext">{{ employee.email_id }}</p>
+      </div>
+      <div>
+        <a href="employees" class="btn btn-primary">Back</a>
+      </div>
+    </div>
+  </div>
+</div>

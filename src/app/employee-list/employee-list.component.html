@@ -1,0 +1,41 @@
+<div class="container mt-4">
+  <div class="card shadow-lg">
+    <div class="card-header bg-primary text-white">
+      <h2><i class="fas fa-users"></i> Employee List</h2>
+    </div>
+    
+    <div class="card-body">
+      <a href="employees" routerLinkActive="active" class="btn btn-primary" style="margin: 10px;">Employee List</a>
+      <a href="create-employee" class="btn btn-primary">Add Employee </a>
+      <table class="table table-hover table-bordered table-striped" *ngIf="employees.length > 0; else noEmployees">
+        <thead class="table-dark">
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Id</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employees">
+            <td>{{employee.first_name}}</td>
+            <td>{{employee.last_name}}</td>
+            <td>{{employee.email_id}}</td>
+            <td>
+              <button (click)="updateEmployee(employee.id)" class="btn btn-info ">Update</button>
+              <button (click)="deleteEmployee(employee.id)" class="btn btn-danger " style="margin-left: 10px;">Delete</button>
+              <button (click)="employeeDetails(employee.id)" class="btn btn-primary " style="margin-left: 10px;">View</button>
+             
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <ng-template #noEmployees>
+        <div class="alert alert-warning text-center" role="alert">
+          <i class="fas fa-exclamation-circle"></i> No employees found.
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

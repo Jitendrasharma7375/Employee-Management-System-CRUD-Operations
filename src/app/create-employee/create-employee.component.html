@@ -1,0 +1,46 @@
+<div class="col-md-8 offset-md-2 my-5">
+    <div class="card shadow-lg p-4 rounded">
+      <h3 class="text-center text-primary mb-4">Create Employee</h3>
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3">
+          <label for="first_name" class="form-label">First Name</label>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="first_name"
+            name="first_name"
+            [(ngModel)]="employee.first_name"
+            placeholder="Enter first name"
+          />
+        </div>
+  
+        <div class="form-group mb-3">
+          <label for="last" class="form-label">Last Name</label>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="last"
+            name="last"
+            [(ngModel)]="employee.last_name"
+            placeholder="Enter last name"
+          />
+        </div>
+  
+        <div class="form-group mb-3">
+          <label for="email_id" class="form-label">Email ID</label>
+          <input
+            type="email"
+            class="form-control form-control-lg"
+            id="email_id"
+            name="email_id"
+            [(ngModel)]="employee.email_id"
+            placeholder="Enter email"
+          />
+        </div>
+  
+        <button type="submit" class="btn btn-success btn-lg btn-block mt-3">Submit</button>
+        <a href="employees" routerLinkActive="active" class="btn btn-primary btn-lg btn-block mt-4" style="margin: 10px;">Discard</a>
+      </form>
+    </div>
+  </div>
+  
